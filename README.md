@@ -5,7 +5,7 @@ Author:  R Shashank Kanna
 ![boot](https://github.com/MrTechyWorker/NetHitX/assets/75602943/0dff85f5-cf99-44f9-9c08-31673ac1486a)
 
 
-NetHitX is an ethical hacking tool crafted for educational purposes, empowering users to perform responsible security assessments and tests on WiFi networks. Always ensure explicit permission to use this script on target networks and adhere to all applicable laws and ethical guidelines.
+NetHitX is an ethical hacking tool crafted for educational purposes, empowering users to perform responsible security assessments and tests on WiFi networks WITHOUT ANY ADDITIONAL HARDWARE. Always ensure explicit permission to use this script on target networks and adhere to all applicable laws and ethical guidelines.
 
 ## Table of Contents
 
