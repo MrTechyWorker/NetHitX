@@ -24,9 +24,8 @@ def check_tool(tool_name):
 tools_to_check = ['aircrack-ng', 'mdk4', 'xterm']
 
 def install_tool(tool_name):
-    cmd = f'sudo apt-get install -y {tool_name}'
-    input( "\nPress enter to start downloading...wait for the pop up to close...")
-    process = pexpect.spawn(f"xterm -title DOWNLOADS -e {cmd}", timeout=None, encoding="utf-8")
+    input( "\nPress enter to start downloading...wait for it to complete...")
+    subprocess.run(['sudo', 'apt-get','install', '-y', tool_name])
     try:
         process.expect(pexpect.EOF)
     except KeyboardInterrupt:
