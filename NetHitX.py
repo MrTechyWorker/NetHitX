@@ -24,14 +24,11 @@ def check_tool(tool_name):
 tools_to_check = ['aircrack-ng', 'mdk4', 'xterm']
 
 def install_tool(tool_name):
-    input( "\nPress enter to start downloading...wait for it to complete...")
-    subprocess.run(['sudo', 'apt-get','install', '-y', tool_name])
+    input( "\nPress enter to start downloading...wait for it to complete..." + Style.RESET_ALL)
     try:
-        process.expect(pexpect.EOF)
+        subprocess.run(['sudo', 'apt','install', '-y', tool_name.strip()])
     except KeyboardInterrupt:
-        os.kill(process.pid, signal.SIGINT)
-    finally:
-        process.close()
+        sys.exit(0)
     
     input(Fore.CYAN + "Press enter and restart the script..!!")
     print(Fore.RED + "Quitting...")
