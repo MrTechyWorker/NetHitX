@@ -26,10 +26,11 @@ tools_to_check = ['aircrack-ng', 'mdk4', 'xterm']
 def install_tool(tool_name):
     input( "\nPress enter to start downloading...wait for it to complete..." + Style.RESET_ALL)
     try:
-        subprocess.run(['sudo', 'apt','install', '-y', tool_name.strip()])
+        yy = f"sudo apt install {tool_name.strip()}"
+        subprocess.run(yy.split(), check=True)
     except KeyboardInterrupt:
         sys.exit(0)
-    
+
     input(Fore.CYAN + "Press enter and restart the script..!!")
     print(Fore.RED + "Quitting...")
     sys.exit(0)
