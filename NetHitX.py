@@ -24,7 +24,8 @@ def check_tool(tool_name):
 tools_to_check = ['aircrack-ng', 'mdk4', 'xterm']
 
 def install_tool(tool_name):
-    input( "\nPress enter to start downloading...wait for it to complete..." + Style.RESET_ALL)
+    input( "\nTHIS TOOL WILL NOT RUN ON ANY KIND OF VIRTUAL MACHINES!!!!.." )
+    input( "Press enter to start downloading...wait for it to complete..." + Style.RESET_ALL)
     try:
         yy = f"sudo apt install {tool_name.strip()}"
         subprocess.run(yy.split(), check=True)
