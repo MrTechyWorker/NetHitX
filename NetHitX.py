@@ -291,16 +291,16 @@ def run_aircrack(cap_file, wordlist_file):
 def list_files(folder_path):
     # Get the list of files in the folder
     files = os.listdir(folder_path)
-
+    cfiles = [file for file in files if file.endswith(".cap")]
     # Print table header
     print("\n| S.No | File Name")
     print("|------|-----------")
 
     # Print files with serial numbers
-    for i, file_name in enumerate(files, start=1):
+    for i, file_name in enumerate(cfiles, start=1):
         print(f"| {i:4} | {file_name}")
 
-    return files
+    return cfiles
 
 def get_file_by_sno(folder_path, s_no):
     files = os.listdir(folder_path)
@@ -403,7 +403,7 @@ def main():
                 if c.lower() == 'y':
                     folder_path = "handshakes"
                     list_files(folder_path)
-                    selected_sno = int(input("\nEnter the S.No of the file you want to retrieve: "))
+                    selected_sno = int(input("\nEnter the S.No of the file you want to retrieve (if captured recently, select the latest file): "))
                     selected_file = get_file_by_sno(folder_path, selected_sno)
                     if selected_file:
                         print(f"Selected file: {selected_file}")
