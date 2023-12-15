@@ -113,7 +113,7 @@ def show_selected_interface():
 def select_interface():
     try:
         result = subprocess.run(["iwconfig"], capture_output=True, text=True)
-        interfaces = [line.split()[0] for line in result.stdout.split("\n") if "IEEE" in line]
+        interfaces = [line.split()[0] for line in result.stdout.split("\n") if "Nickname:" in line]
 
         print(Fore.YELLOW + "\nAvailable Network Interfaces:")
         print("{:<5} {:<15}".format("S.No", "Interface"))
