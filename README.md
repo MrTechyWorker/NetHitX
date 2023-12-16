@@ -55,19 +55,6 @@ pip install -r requirements.txt
 sudo python NetHitX.py
 ```
 
-### Seperate tool
-Make NetHitX a seperate tool in you local machine by copying the executable file 'NetHitX' in repo directory and paste it in /usr/bin or simply run...
-```bash
-# Copy command
-sudo mv NetHitX /usr/bin
-```
-Now you can run this script by running..
-```bash
-# Run command
-sudo NetHitX
-```
-...No matter in which location you are.
-
 ## Contribute
 
 We welcome contributions from the community! To contribute to NetHitX, please follow these guidelines:
